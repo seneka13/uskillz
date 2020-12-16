@@ -1,0 +1,127 @@
+@import "../../styles/variables.scss";
+
+.goBack {
+  position: absolute;
+  top: 15px;
+  left: 50px;
+}
+
+.goBack img {
+  height: 50px;
+}
+
+@media (max-width: 800px) {
+  .goBack {
+    left: 25px;
+  }
+
+  .goBack img {
+    height: 25px;
+  }
+}
+
+.privacyHeader {
+  background: $primary-color;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 1fr;
+  color: $accent-color;
+  justify-items: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.addToHomeScreen {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.addToHomeScreenBlock {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+@media (max-width: 800px) {
+  .addToHomeScreen {
+    text-align: start;
+  }
+
+  .addToHomeScreenBlock {
+    grid-template-columns: 1fr;
+  }
+}
+
+.privacyHeader button {
+  width: 30px;
+}
+.privacyHeader button img {
+  width: 30px;
+}
+
+.privacyContent {
+  background: $background-color;
+  color: $text-color;
+  padding: 40px 0px;
+  min-height: 100vh;
+  margin-top: -5px;
+  text-align: justify;
+  font-size: 20px;
+  font-weight: 500;
+  .abzac {
+    text-indent: 40px;
+    line-height: 35px;
+  }
+  span {
+    color: $inverse-color;
+    font-weight: 600;
+  }
+  h1,
+  h2,
+  h3 {
+    text-indent: 40px;
+    margin: 30px 0px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-weight: 300;
+    text-indent: 20px;
+  }
+}
+
+ol {
+  list-style: none;
+  padding: 0px;
+  li {
+    text-indent: 20px;
+  }
+}
+
+.link:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 450px) {
+  .privacyHeader h1 {
+    font-size: 26px;
+  }
+
+  .privacyContent {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 330px) {
+  .privacyHeader h1 {
+    font-size: 17px;
+  }
+}

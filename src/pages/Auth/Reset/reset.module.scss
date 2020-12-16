@@ -1,0 +1,121 @@
+@import "../../../styles/variables.scss";
+
+.resetPage {
+  padding: 110px 0px;
+  background: $background-color;
+  min-height: 100vh;
+}
+
+.resetContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  margin-left: 80px;
+
+  .logo {
+    margin-bottom: 15px;
+  }
+  .informText {
+    color: $inverse-color;
+    text-align: center;
+    width: 300px;
+  }
+  .resetForm {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    .resetField {
+      width: 281px;
+      height: 50px;
+      background: $primary-color;
+      box-shadow: 3px 1px 8px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      margin-bottom: 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        margin-right: 12px;
+      }
+      input {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.165px;
+        color: $accent-color;
+        max-width: 75%;
+        &::placeholder {
+          color: $placeholder-color;
+        }
+      }
+    }
+  }
+
+  .resetBtn {
+    width: 281px;
+    height: 50px;
+    background: $inverse-color;
+    border-radius: 20px;
+    font-size: 22px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: -0.165px;
+    color: $primary-color;
+    @extend %btn-clicked;
+  }
+}
+
+.resetFooter {
+  font-size: 18px;
+  color: $font-color;
+  text-align: center;
+  margin-top: 28px;
+  width: 281px;
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 300;
+    margin-bottom: 20px;
+    a {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .resetPage {
+    padding: 90px 0px;
+    background: $background-color;
+    min-height: 100vh;
+  }
+  
+  .resetContent {
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .resetPage {
+    padding: 60px 0px;
+    background: $background-color;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .resetPage {
+    padding: 20px 0px;
+    background: $background-color;
+    min-height: 100vh;
+  }
+}

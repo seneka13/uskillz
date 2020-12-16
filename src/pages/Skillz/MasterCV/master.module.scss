@@ -1,0 +1,68 @@
+@import "../../../styles/variables.scss";
+
+.masterPage {
+  background: $background-color;
+  min-height: 100vh;
+  padding: 51px 0px;
+}
+
+.masterContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .expGrid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin-right: 25px;
+  }
+  .expGrid2 {
+    width: 55%;
+    height: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .masterContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    justify-items: center;
+    .expGrid {
+      grid-template-columns: 1fr;
+      margin-right: 0px;
+    }
+    .expGrid2 {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .masterContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    .gridDetail {
+      grid-column-start: 1;
+    }
+    .expGrid {
+      grid-gap: 0px;
+      margin-right: 0px;
+    }
+    .expGrid2 {
+      grid-gap: 0px;
+    }
+  }
+}

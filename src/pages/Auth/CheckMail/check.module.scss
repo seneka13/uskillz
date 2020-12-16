@@ -1,0 +1,39 @@
+@import "../../../styles/variables.scss";
+
+.checkPage {
+  padding: 110px 0px;
+  background: #fbfbfb;
+  min-height: 100vh;
+}
+
+.checkContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 1fr;
+  margin-left: 80px;
+  .checkMsg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      font-size: 24px;
+      color: $accent-color;
+      text-align: center;
+    }
+  }
+
+}
+
+
+@media (max-width: 1200px) {
+  .checkContent {
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+  }
+}

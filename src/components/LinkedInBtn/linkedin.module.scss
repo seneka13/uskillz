@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+
+.loginBtn {
+  width: 281px;
+  height: 50px;
+  background: $inverse-color;
+  border-radius: 20px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.165px;
+  color: $primary-color;
+  @extend %btn-clicked;
+  a{
+    color: inherit;
+  }
+}

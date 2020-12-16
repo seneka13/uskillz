@@ -1,0 +1,22 @@
+
+
+.phoneBlock {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  .phoneImg {
+    &:last-child {
+      position: relative;
+      top: 35px;
+      left: -120px;
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .phoneBlock {
+    display: none;
+  }
+}
+

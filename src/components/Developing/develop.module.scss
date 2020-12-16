@@ -1,0 +1,14 @@
+@import "../../styles/variables.scss";
+
+.developPage {
+  padding: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    font-size: 45px;
+    color: $inverse-color;
+  }
+}

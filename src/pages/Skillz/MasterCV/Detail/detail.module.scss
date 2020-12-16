@@ -1,0 +1,32 @@
+@import "../../../../styles/variables.scss";
+
+.detailPage {
+  background: $background-color;
+  min-height: 100vh;
+  padding: 51px 0px;
+}
+
+
+.detailContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  .gridDetail {
+    grid-column-start: 2;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .detailContent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+    justify-items: center;
+    .gridDetail {
+      grid-column-start: 1;
+    }
+  }
+}

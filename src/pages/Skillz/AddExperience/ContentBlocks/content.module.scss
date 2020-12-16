@@ -1,0 +1,315 @@
+@import "../../../../styles/variables.scss";
+
+.requireField {
+  color: $inverse-color;
+  margin-left: 5px;
+}
+
+.addExpName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 18px;
+  color: $text-color;
+  h1 {
+    font-size: 26px;
+  }
+
+  .editBtn {
+    margin-left: 10px;
+    &:hover {
+      transform: scale(1.2);
+      transition: transform ease-in 0.3s;
+    }
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  .saveBtn {
+    margin-left: 10px;
+    width: 61px;
+    height: 23px;
+    background: $inverse-color;
+    border-radius: 10px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+    @extend %btn-clicked;
+  }
+
+  .nameField {
+    width: 398px;
+    height: 40px;
+    background: $select-color;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0px 20px;
+    input {
+      background: $select-color;
+      width: 100%;
+    }
+  }
+}
+
+.textField {
+  width: 100%;
+  height: 76px;
+  background: $select-color;
+  border-radius: 15px;
+  padding: 15px;
+  border: none;
+  resize: none;
+  outline: none;
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.interBlock {
+  width: 289px !important;
+  min-height: 40px;
+  background: $primary-color;
+  box-shadow: 3px 1px 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 17px 22px 17px 22px;
+  margin-bottom: 21px;
+  position: relative;
+  h3 {
+    @extend %subtitle;
+  }
+  .popoverBtn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+  .dropDownShow {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(90deg);
+  }
+
+  .dropDownClose {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(0deg);
+  }
+
+  .intervievFields {
+    .textField {
+      height: 66px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      letter-spacing: -0.165px;
+    }
+  }
+
+  .show-enter-active {
+    animation: showField 400ms ease-out forwards;
+    height: 315px;
+    overflow: hidden;
+  }
+
+  .show-exit-active {
+    animation: showField 400ms ease-out alternate-reverse;
+    height: 0px;
+    overflow: hidden;
+  }
+
+  @keyframes showField {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 315px;
+    }
+  }
+}
+
+
+.contentBlock {
+  @extend %content-block;
+
+  h3 {
+    @extend %subtitle;
+  }
+
+  .selectedBlock {
+    margin: 12px 0px;
+    button {
+      padding: 0px 6px;
+      min-width: auto;
+      height: 22px;
+      background: rgba($color: $accent-color, $alpha: 0.7);
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -0.165px;
+      color: $primary-color;
+      margin: 5px;
+      text-align: justify;
+      @extend %btn-clicked;
+    }
+  }
+
+  .choiceBlock {
+    margin: 12px 0px;
+    h5 {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 21px;
+      letter-spacing: -0.165px;
+      color: $placeholder-color;
+      margin-bottom: 5px;
+    }
+
+    .choiceBtns {
+      display: flex;
+      flex-wrap: wrap;
+
+      .companySelectBtn {
+        background: rgba($color: $accent-color, $alpha: 0.7);
+      }
+      button {
+        padding: 0px 6px;
+        min-width: auto;
+        height: 22px;
+        background: rgba($color: $inverse-color, $alpha: 0.7);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.165px;
+        color: $primary-color;
+        margin: 5px;
+        text-align: justify;
+        @extend %btn-clicked;
+      }
+    }
+  }
+
+  .popoverBtn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+
+
+  .inputField {
+    @extend %input-field;
+  }
+
+  .select {
+    min-width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: $text-color;
+  }
+
+  .DatePickContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    .DatePickInput {
+      background: $select-color;
+      border-radius: 24px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .searchContainer {
+    position: relative;
+    .skillsList {
+      background-color: $select-color;
+      height: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 40px;
+      width: 100%;
+      border-radius: 15px;
+      max-height: 300px;
+      overflow: hidden;
+      z-index: 10;
+      button {
+        width: 100%;
+        padding: 15px;
+        &:hover {
+          background: $accent-color;
+          color: $inverse-color;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .dropDownShow {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(90deg);
+  }
+
+  .dropDownClose {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(0deg);
+  }
+}
+
+
+.pulse {
+  animation: pulse ease-in-out 900ms infinite;
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .contentBlock {
+    width: 350px;
+    min-height: 40px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .addExpName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 26px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: $text-color;
+    h1 {
+      font-size: 18px;
+    }
+
+    .nameField {
+      width: 100%;
+    }
+  }
+
+  .contentBlock {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 350px) {
+}

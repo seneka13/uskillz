@@ -1,0 +1,71 @@
+@import '../../styles/variables.scss';
+
+
+.formErr {
+  position: fixed;
+  top: 20px;
+  left: 0px;
+  right: 0px;
+  max-width: 40%;
+  min-height: 30px;
+  padding: 10px;
+  margin: 0px auto;
+  background-color: $background-color;
+  color: $font-color;
+  font-weight: bold;
+  border-radius: 2px;
+  border: 2px solid $error-color;
+  font-size: 14px;
+  animation: error ease-in-out 3000ms forwards;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 3px 1px 8px 4px rgba(0, 0, 0, 0.1);
+
+  div {
+    margin-bottom: 15px;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@keyframes error {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(20px)
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(0px)
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(0px)
+    
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+}
+
+
+@media (max-width: 900px) {
+  .formErr {
+    max-width: 85%;
+    min-height: 30px;
+    padding: 10px;
+  }
+}

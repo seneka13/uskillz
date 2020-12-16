@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.labelText {
+  font-weight: bold;
+  font-size: 18px;
+  color: $text-color;
+  text-align: justify;
+  margin-bottom: 4px;
+}

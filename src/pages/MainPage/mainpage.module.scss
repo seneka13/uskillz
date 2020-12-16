@@ -1,0 +1,152 @@
+@import "../../styles/variables.scss";
+
+.mainPage {
+  height: 100vh;
+  background: linear-gradient(
+    150deg,
+    $primary-color 800px,
+    $inverse-color 10%
+  );
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 25px;
+  padding: 130px 0 0 150px;
+  margin-bottom: 100px;
+  width: 100vw;
+}
+
+.mainPageTitle {
+  font-size: 48px;
+  margin-bottom: 41px;
+  font-weight: bold;
+  color: $accent-color;
+  display: grid;
+  display: -ms-grid;
+  grid-template-rows: auto auto;
+}
+
+.mainPageTitle span:last-child {
+  color: $inverse-color;
+}
+
+.mainPageContent {
+  color: $font-color;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 46px;
+  width: 446px;
+  p {
+    overflow-wrap: break-word;
+  }
+}
+
+.mainPageGallery {
+  display: grid;
+  display: -ms-grid;
+  justify-items: center;
+  align-items: center;
+  background-image: url(../../assets/PageImages/mainPageNotebook.png);
+  background-position: -10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.authBtn {
+  background: $inverse-color;
+  border-radius: 20px;
+  width: 230px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  font-size: 18px;
+  font-weight: 400 !important;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 1100px) {
+  .mainPage {
+    padding-top: 136px;
+    grid-gap: 0;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 110px 0 0 90px;
+    background: linear-gradient(150deg, $primary-color 900px, $inverse-color 10%);
+  }
+
+  .mainPageGallery {
+    background-position: left;
+    width: auto;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 600px) {
+  .mainPageContent {
+    max-width: 100%;
+  }
+
+  .authButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mainPage {
+    height: auto;
+    padding: 0;
+    padding-bottom: 50px;
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 38px;
+    padding: 0px 0 0 16px;
+    background: linear-gradient(
+      150deg,
+      $primary-color 700px,
+      $inverse-color 10%
+    );
+  }
+
+  .mainPageGallery {
+    height: 300px;
+    background-size: contain;
+    width: 100%;
+    background-position: left;
+    margin-left: 18px;
+  }
+
+  .mainPageTitle {
+    padding: 120px 0px 0px 0px;
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .mainPageContent {
+    font-size: 24px;
+    margin-bottom: 0;
+    font-weight: normal;
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+  .mainPageTitle {
+    font-size: 30px;
+  }
+
+  .mainPageContent {
+    font-size: 18px;
+  }
+
+  .mainPageGallery {
+    height: 200px;
+    margin-left: 18px;
+  }
+}
+

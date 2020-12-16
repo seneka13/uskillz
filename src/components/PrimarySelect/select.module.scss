@@ -1,0 +1,76 @@
+@import '../../styles/variables.scss';
+
+.selectField {
+  min-width: 100%;
+  min-height: 100%;
+  background:$select-color;
+  border-radius: 24px;
+  color: $text-color;
+  display: flex;
+  padding: 0px 10px 0px 20px;
+  align-items: center;
+  margin-bottom: 6px;
+  font-weight: 300;
+  position: relative;
+}
+
+.selectBtn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 20px;
+  margin-right: 15px;
+}
+
+.dropDownShow {
+  transition: 0.3s;
+  height: 25px;
+  transform: rotate(90deg);
+}
+
+.dropDownClose {
+  transition: 0.3s;
+  height: 25px;
+  transform: rotate(0deg);
+}
+
+
+.selectListHide {
+  display: none
+}
+
+.selectList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  min-height: 100px;
+  max-height: 150px;
+  width: 100%;
+  border-radius: 15px;
+  background-color: $select-color;
+  border: 1px solid $primary-color;
+  position: relative;
+  top: -2px;
+  z-index: 999;
+
+  .selectItem {
+    min-height: 30px;
+    padding: 10px;
+    border-radius: 15px;
+    word-break: break-all;
+    z-index: 999;
+    &:hover {
+      background: $accent-color;
+      color: $inverse-color;
+    }
+  }
+}
+
+
+.labelText {
+  font-weight: bold;
+  font-size: 18px;
+  color: $text-color;
+  text-align: justify;
+  margin-bottom: 4px;
+}

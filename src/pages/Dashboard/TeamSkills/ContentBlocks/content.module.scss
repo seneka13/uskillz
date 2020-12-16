@@ -1,0 +1,28 @@
+@import "../../../../styles/variables.scss";
+
+.skillsBlock {
+  @extend %content-block;
+
+  h3 {
+    @extend %subtitle;
+  }
+
+  .popoverBtn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+}
+
+.skillsContainer {
+  display: grid;
+  grid-gap: 15px;
+  align-content: center;
+  justify-items: start;
+  padding: 0px;
+  list-style: none;
+
+  li {
+    min-width: 100%;
+  }
+}

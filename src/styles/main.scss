@@ -1,0 +1,69 @@
+@import "./variables.scss";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+button {
+  margin: 0px;
+  padding: 0px;
+}
+
+#root {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: $accent-color;
+}
+
+button {
+  border: none;
+  background: none;
+  outline: none !important;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  color: inherit;
+  outline: none;
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0px;
+}
+
+.modal-content {
+  background: none !important;
+  text-align: center !important;
+  display: grid !important;
+  border: none !important;
+  width: auto !important;
+  justify-items: center !important;
+}
+
+.modal-dialog-centered {
+  justify-content: center !important;
+}
+

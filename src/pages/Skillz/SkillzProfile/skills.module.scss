@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.skillzProfilePage {
+  background: $background-color;
+  min-height: 100vh;
+  padding: 51px 0px;
+}
+
+.skillzProfileContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
+  .skillzGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .skillzProfileContent {
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+    justify-items: center;
+    align-content: center;
+    .skillzGrid {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .skillzProfilePage {
+    background: $background-color;
+    min-height: 100vh;
+    padding: 51px 0px 120px 0px;
+  }
+  .skillzProfileContent {
+    grid-template-columns: 100%;
+    .skillzGrid {
+      grid-template-columns: 1fr;
+      align-content: center;
+      justify-items: center;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+}

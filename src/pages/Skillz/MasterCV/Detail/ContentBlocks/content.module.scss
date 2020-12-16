@@ -1,0 +1,379 @@
+@import "../../../../../styles/variables.scss";
+
+.dropDown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.165px;
+  color: $text-color;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  .dropDownContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .arrIimg {
+    height: 25px;
+    width: 25px;
+  }
+
+  .count {
+    min-height: 20px;
+    min-width: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .dropDownShow {
+    transition: 0.3s;
+    transform: rotate(90deg);
+  }
+
+  .dropDownClose {
+    transition: 0.3s;
+    transform: rotate(0deg);
+  }
+}
+
+.expContainerShow {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 0px;
+  transition: height 0.3s ease-in-out;
+  padding-left: 10px;
+  width: 100%;
+  margin: 0px;
+
+  button {
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  img {
+    height: 18px;
+    width: 18px;
+  }
+
+  .expShown {
+    display: flex;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.165px;
+    &::before {
+      content: "";
+      margin: 0px 5px 0px 0px;
+      width: 20px;
+      height: 1px;
+      background-color: $accent-color;
+    }
+    .verticalLine {
+      position: absolute;
+      left: 0px;
+      max-width: 1px;
+      min-width: 1px;
+      min-height: 100%;
+      background-color: $accent-color;
+    }
+
+    &:last-child {
+      .verticalLine {
+        bottom: 50%;
+      }
+    }
+  }
+
+  .expHiden {
+    display: flex;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+    height: 0px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.165px;
+    &::before {
+      content: "";
+      margin: 0px 5px 0px 0px;
+      width: 20px;
+      height: 1px;
+      background-color: $accent-color;
+    }
+    .verticalLine {
+      position: absolute;
+      left: 0px;
+      max-width: 1px;
+      min-width: 1px;
+      min-height: 100%;
+      background-color: $accent-color;
+    }
+
+    &:last-child {
+      .verticalLine {
+        bottom: 50%;
+      }
+    }
+  }
+}
+
+.childsContainerShow {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 0px;
+  transition: height 0.3s ease-in-out;
+  padding-left: 10px;
+  width: 100%;
+  margin: 0px;
+
+  img {
+    height: 18px;
+    width: 18px;
+    margin-right: 25px;
+  }
+
+  .itemShown {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.165px;
+    .verticalLine {
+      position: absolute;
+      left: 0px;
+      max-width: 1px;
+      min-width: 1px;
+      min-height: 100%;
+      background-color: $accent-color;
+    }
+
+    &:last-child {
+      .verticalLine {
+        bottom: 50%;
+      }
+    }
+  }
+
+  .itemHiden {
+    display: flex;
+    align-items: center;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.165px;
+    .verticalLine {
+      position: absolute;
+      left: 0px;
+      max-width: 1px;
+      min-width: 1px;
+      min-height: 100%;
+      background-color: $accent-color;
+    }
+
+    &:last-child {
+      .verticalLine {
+        bottom: 50%;
+      }
+    }
+  }
+}
+
+.contentBlock {
+  @extend %content-block;
+  .editBtn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+
+  .saveBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 61px;
+    height: 23px;
+    background: $inverse-color;
+    border-radius: 10px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 14px;
+    @extend %btn-clicked;
+  }
+
+  h3 {
+    @extend %subtitle;
+  }
+
+  .companyName {
+    font-size: 18px;
+    font-weight: 600;
+    color: $accent-color;
+    border-bottom: 1px solid $inverse-color;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
+
+  .selectedBlock {
+    margin: 12px 0px;
+    button {
+      padding: 0px 6px;
+      min-width: auto;
+      height: 22px;
+      background: rgba($color: $accent-color, $alpha: 0.7);
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 14px;
+      letter-spacing: -0.165px;
+      color: $primary-color;
+      margin: 5px;
+      text-align: justify;
+      @extend %btn-clicked;
+    }
+  }
+
+  .choiceBlock {
+    margin: 12px 0px;
+    h5 {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 21px;
+      letter-spacing: -0.165px;
+      color: $placeholder-color;
+      margin-bottom: 5px;
+    }
+
+    .choiceBtns {
+      display: flex;
+      flex-wrap: wrap;
+
+      .companySelectBtn {
+        background: rgba($color: $accent-color, $alpha: 0.7);
+      }
+      button {
+        padding: 0px 6px;
+        min-width: auto;
+        height: 22px;
+        background: rgba($color: $inverse-color, $alpha: 0.7);
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: -0.165px;
+        color: $primary-color;
+        margin: 5px;
+        text-align: justify;
+        @extend %btn-clicked;
+      }
+    }
+  }
+
+  .inputField {
+    @extend %input-field;
+  }
+
+  .select {
+    min-width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    color: $text-color;
+  }
+
+  .DatePickContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    .DatePickInput {
+      background: $select-color;
+      border-radius: 24px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .searchContainer {
+    position: relative;
+    .skillsList {
+      background-color: $select-color;
+      height: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 40px;
+      width: 100%;
+      border-radius: 15px;
+      max-height: 300px;
+      overflow: hidden;
+      z-index: 10;
+      button {
+        width: 100%;
+        padding: 15px;
+        &:hover {
+          background: $accent-color;
+          color: $inverse-color;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+
+  .dropDownShow {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(90deg);
+  }
+
+  .dropDownClose {
+    transition: 0.3s;
+    height: 25px;
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 1300px) {
+  .contentBlock {
+    width: 350px;
+    min-height: 40px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contentBlock {
+    width: 100%;
+  }
+}
+
+@media (max-width: 350px) {
+}

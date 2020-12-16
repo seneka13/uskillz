@@ -1,0 +1,94 @@
+@import "../../../styles/variables.scss";
+
+.expPage {
+  background: $background-color;
+  min-height: 100vh;
+  padding: 51px 0px;
+}
+
+.expContent {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 0.5fr;
+  grid-gap: 20px;
+  justify-items: center;
+  .expGrid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin-right: 25px;
+  }
+
+  .graphs {
+    display: grid;
+    min-width: 100%;
+    .graphLine {
+      display: grid;
+      grid-template-columns: 3.2fr 0.8fr;
+      grid-gap: 20px;
+    }
+  }
+
+  .myMasonryGrid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -30px;
+    width: auto;
+  }
+  .myMasonryGridColumn {
+    padding-left: 20px;
+    background-clip: padding-box;
+  }
+}
+
+@media (max-width: 1250px) {
+  .expContent {
+    grid-template-columns: 100%;
+    grid-gap: 10px;
+    justify-items: center;
+    align-content: center;
+    .expGrid {
+      display: grid;
+      align-content: center;
+      justify-items: center;
+      grid-template-columns: 1fr;
+    }
+    .radioBlock {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .expPage {
+    background: $background-color;
+    min-height: 100vh;
+    padding: 51px 0px 120px 0px;
+  }
+  .expContent {
+    grid-template-columns: 100%;
+    .expGrid {
+      grid-template-columns: 1fr;
+      align-content: center;
+      justify-items: center;
+    }
+    .graphs {
+      display: grid;
+      .graphLine {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+    }
+    .radioBlock {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
+  }
+}
+

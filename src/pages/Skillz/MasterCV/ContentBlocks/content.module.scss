@@ -1,0 +1,58 @@
+@import "../../../../styles//variables.scss";
+
+.contentBlock {
+  @extend %content-block;
+
+  h3 {
+    @extend %subtitle;
+  }
+
+  .popoverBtn {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+}
+
+.listContainer {
+  display: grid;
+  grid-gap: 15px;
+  align-content: center;
+  justify-items: start;
+  padding: 0px;
+  list-style: none;
+
+  .count {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .listItem {
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: height 0.3s ease-in-out;
+    padding: 0px;
+    height: 30px;
+    overflow: hidden;
+    position: relative;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.165px;
+    color: $text-color;
+    div {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
