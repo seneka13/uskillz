@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ResponsiveBar } from "@nivo/bar";
+import { ResponsiveBar, ResponsiveBarCanvas } from "@nivo/bar";
 import styles from "./graph.module.scss";
 import { useSelector } from "react-redux";
 import { useResize } from "../../../../customHooks/useResize";
@@ -18,85 +18,50 @@ const HardSkillsBar = ({ activeSkills }) => {
         {activeSkills === "haveGraph" && "Hard Skills"}
         {activeSkills === "needGraph" && "Hard Skills Members Need"}
       </h3>
-      <ResponsiveBar
+      <ResponsiveBarCanvas
         data={activeSkills === "haveGraph" ? graphsSkillsList.hard_skills : graphsSkillsNeedList.hard_skills}
         keys={graphsSkillsList.teams_name || graphsSkillsList.users_in_team || ["count"]}
         indexBy="skills"
         margin={{ top: 30, right: windowSize ? 140 : 115, bottom: 50, left: windowSize ? 170 : 30 }}
-        padding={0.75}
-        innerPadding={2}
-        height={600}
-        layout={`${windowSize ? "horizontal" : "vertical"}`}
+        pixelRatio={1}
+        padding={0.15}
+        innerPadding={0}
+        minValue="auto"
+        maxValue="auto"
+        groupMode="stacked"
+        layout="horizontal"
+        reverse={false}
         valueScale={{ type: "linear" }}
         indexScale={{ type: "band", round: true }}
-        colors={colorArr}
-        defs={[
-          {
-            id: "dots",
-            type: "patternDots",
-            background: "inherit",
-            color: "#38bcb2",
-            size: 4,
-            padding: 1,
-            stagger: true,
-          },
-          {
-            id: "lines",
-            type: "patternLines",
-            background: "inherit",
-            color: "#eed312",
-            rotation: -45,
-            lineWidth: 6,
-            spacing: 10,
-          },
-        ]}
-        axisBottom={
-          windowSize
-            ? {
-                tickSize: 0,
-                tickPadding: 0,
-                tickRotation: 0,
-              }
-            : null
-        }
-        enableGridY={false}
-        borderRadius={6}
-        borderColor={{ from: "color", modifiers: [["darker", "2.3"]] }}
-        axisLeft={{
-          tickSize: 0,
-          tickPadding: 10,
+        colors={{ scheme: "red_blue" }}
+        colorBy="id"
+        borderWidth={0}
+        borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
+        axisTop={{ tickSize: 5, tickPadding: 5, tickRotation: 0, legend: "", legendOffset: 36 }}
+        axisRight={null}
+        axisBottom={{
+          tickSize: 5,
+          tickPadding: 5,
           tickRotation: 0,
+          legend: "",
+          legendPosition: "middle",
+          legendOffset: 36,
         }}
-        enableLabel={false}
+        axisLeft={{
+          tickSize: 5,
+          tickPadding: 5,
+          tickRotation: 0,
+          legend: "food",
+          legendPosition: "middle",
+          legendOffset: -40,
+        }}
+        enableGridX={true}
+        enableGridY={false}
+        enableLabel={true}
+        labelSkipWidth={12}
+        labelSkipHeight={12}
         labelTextColor={{ from: "color", modifiers: [["darker", 1.6]] }}
-        legends={[
-          {
-            dataFrom: "keys",
-            anchor: "top-right",
-            direction: "column",
-            justify: false,
-            translateX: 120,
-            translateY: 0,
-            itemsSpacing: 2,
-            itemWidth: 100,
-            itemHeight: 25,
-            itemDirection: "left-to-right",
-            itemOpacity: 0.85,
-            symbolSize: 17,
-            symbolShape: "circle",
-            effects: [
-              {
-                on: "hover",
-                style: {
-                  itemOpacity: 1,
-                },
-              },
-            ],
-          },
-        ]}
-        animate={true}
-        motionStiffness={90}
-        motionDamping={15}
+        isInteractive={true}
       />
     </div>
   );
