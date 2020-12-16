@@ -26,7 +26,7 @@
     "redux-thunk": "^2.3.0",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "https://seneka13.github.io/uskillz",
+  "homepage": "http://seneka13.github.io/uskillz",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
