@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/uskillz/static/css/main.b2e51673.chunk.css",
-    "main.js": "/uskillz/static/js/main.d02405f1.chunk.js",
-    "main.js.map": "/uskillz/static/js/main.d02405f1.chunk.js.map",
+    "main.js": "/uskillz/static/js/main.f31d8478.chunk.js",
+    "main.js.map": "/uskillz/static/js/main.f31d8478.chunk.js.map",
     "runtime-main.js": "/uskillz/static/js/runtime-main.73b57600.js",
     "runtime-main.js.map": "/uskillz/static/js/runtime-main.73b57600.js.map",
     "static/css/2.d66653fa.chunk.css": "/uskillz/static/css/2.d66653fa.chunk.css",
-    "static/js/2.30976e3c.chunk.js": "/uskillz/static/js/2.30976e3c.chunk.js",
-    "static/js/2.30976e3c.chunk.js.map": "/uskillz/static/js/2.30976e3c.chunk.js.map",
+    "static/js/2.741a3e14.chunk.js": "/uskillz/static/js/2.741a3e14.chunk.js",
+    "static/js/2.741a3e14.chunk.js.map": "/uskillz/static/js/2.741a3e14.chunk.js.map",
     "index.html": "/uskillz/index.html",
     "static/css/2.d66653fa.chunk.css.map": "/uskillz/static/css/2.d66653fa.chunk.css.map",
     "static/css/main.b2e51673.chunk.css.map": "/uskillz/static/css/main.b2e51673.chunk.css.map",
-    "static/js/2.30976e3c.chunk.js.LICENSE.txt": "/uskillz/static/js/2.30976e3c.chunk.js.LICENSE.txt",
+    "static/js/2.741a3e14.chunk.js.LICENSE.txt": "/uskillz/static/js/2.741a3e14.chunk.js.LICENSE.txt",
     "static/media/accentLogo.d158ff42.png": "/uskillz/static/media/accentLogo.d158ff42.png",
     "static/media/androidmock.48176ae7.png": "/uskillz/static/media/androidmock.48176ae7.png",
     "static/media/cancel.9895197a.svg": "/uskillz/static/media/cancel.9895197a.svg",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.73b57600.js",
     "static/css/2.d66653fa.chunk.css",
-    "static/js/2.30976e3c.chunk.js",
+    "static/js/2.741a3e14.chunk.js",
     "static/css/main.b2e51673.chunk.css",
-    "static/js/main.d02405f1.chunk.js"
+    "static/js/main.f31d8478.chunk.js"
   ]
 }
