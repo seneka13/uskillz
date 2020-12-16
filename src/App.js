@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       {dataLoading && <Loader />}
-      <BrowserRouter>
+      <BrowserRouter basename="/uskillz">
         <Route path={routes.index.landing} exact component={MainPage} />
         <Route path={routes.index.aboutUs} exact component={AboutUs} />
         <Route path={routes.index.privacy} exact component={Privacy} />
@@ -46,7 +46,5 @@ function App() {
     </>
   );
 }
-
-
 
 export default App;
